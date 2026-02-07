@@ -2,7 +2,9 @@
 **Matthew McCann**  
 _University of Strathclyde, 2026_
 
--Extension of [Marco De Angelis'](https://github.com/marcodeangelis) intervals [library](https://github.com/marcodeangelis/intervals) to include an affine form.
+### Features
+---
+- Extension of [Marco De Angelis'](https://github.com/marcodeangelis) intervals [library](https://github.com/marcodeangelis/intervals) to include an affine form.
 - Support for Simple Automatic Differentation and by extentison Taylor Polynomials.
 
 The concepts of the affine form in this library were obtained from:
