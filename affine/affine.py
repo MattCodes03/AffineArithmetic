@@ -38,6 +38,10 @@ class AffineForm:
         eps = cls.new_noise()
         return cls(x0, {eps: r})
 
+    def prune_eps(self, tol=1e-3):
+        coeffs = {eps: v for eps, v in self.coeffs.items() if abs(v) > tol}
+        return AffineForm(self.x0, coeffs)
+
     def __neg__(self):
         coeffs = {eps: -v for eps, v in self.coeffs.items()}
         return AffineForm(-self.x0, coeffs)
@@ -140,7 +144,6 @@ class AffineForm:
 
         return AffineForm(x0, coeffs)
 
-    # ---- Right-hand division by scalar ----
     def __rtruediv__(self, other):
         # other / self
         if isinstance(other, (int, float)):
