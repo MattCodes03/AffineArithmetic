@@ -1,4 +1,4 @@
-from taylor.autodiff import Variable, DifferentiableFunction
+from autodiff.autodiff import Variable, DifferentiableFunction
 
 # Define the function
 
