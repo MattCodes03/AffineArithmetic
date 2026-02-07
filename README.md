@@ -2,4 +2,4 @@
 **Matthew McCann**  
 _University of Strathclyde, 2026_
 
-Extentsion of [Marco De Angelis'](https://github.com/marcodeangelis) intervals [library](https://github.com/marcodeangelis/intervals) to inlcude an affine form.
+Extentsion of [Marco De Angelis'](https://github.com/marcodeangelis) intervals [library](https://github.com/marcodeangelis/intervals) to include an affine form.
