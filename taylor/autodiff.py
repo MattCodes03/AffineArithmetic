@@ -1,5 +1,6 @@
 import numpy as np
 from collections import defaultdict
+import math
 
 
 class Variable:
@@ -89,15 +90,14 @@ class DifferentiableFunction:
             derivs.append(current)
         return derivs
 
-    def taylor_polynomial(self, x, x0, derivs):
-        dx = x.value - x0
-        result = self.func(Variable(x0)).value
-        fact = 1
-        power = 1
-        for k, d in enumerate(derivs, start=1):
-            fact *= k
-            power *= dx
-            result += d.value * power / fact
+    def taylor_polynomial(self, x, a, derivs):
+        dx = x.value - a
+        result = self.func(Variable(a)).value
+
+        for n, d in enumerate(derivs, start=1):
+            term = d.value * (dx ** n) / math.factorial(n)
+            result += term
+
         return result
 
     def print_derivatives(self, x, n):
