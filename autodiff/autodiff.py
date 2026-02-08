@@ -1,3 +1,15 @@
+"""
+------------------------------
+cre: Feb 2026
+
+web: github.com/mattcodes03
+org: Univerity of Strathclyde
+
+MIT License
+------------------------------
+
+"""
+
 import numpy as np
 from collections import defaultdict
 import math
